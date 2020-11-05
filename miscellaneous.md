@@ -1,7 +1,5 @@
 # Miscellaneous
 
----
-
 ## `use strict`
 
 Used before the new-ish (ES5+) code to work by new standarts, it doesn't accept bad syntax (e.g. not declared variables,non-existing property, object, etc), some restricted words (arguments, eval, public, static, etc)

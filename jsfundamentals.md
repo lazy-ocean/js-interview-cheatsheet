@@ -1,7 +1,5 @@
 # JS Fundamentals
 
----
-
 ## Data types
 
 #### 1. Primitives
@@ -62,3 +60,5 @@ undefined == undefined || undefined === undefined // true
 0 == null // false
 0 == undefined // false
 ```
+
+---
