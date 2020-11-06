@@ -65,7 +65,7 @@ work(); // 'John'
 
 ---
 
-## Bind
+## `bind`
 
 ```
 let user = {
@@ -130,4 +130,49 @@ let runner = {
 
 let run = runner.run.bind(flyer, 20); // Flyer runs at 20 mph.
 let fly = flyer.fly.bind(runner, 10); // Runner flies at 10 mph.
+```
+
+---
+
+## `call`
+
+Examples of work:
+
+```
+function sayHi() {
+  alert(this.name);
+}
+let user = { name: "John" };
+let admin = { name: "Admin" };
+
+sayHi.call(user); // John
+sayHi.call(admin); // Admin
+```
+
+`call` works similar as `apply`, the only difference is how they treat arguments:
+
+```
+const person = {
+  fullName: function(city, country) {
+    return this.firstName + " " + this.lastName + "," + city + "," + country;
+  }
+}
+const person1 = {
+  firstName:"John",
+  lastName: "Doe"
+}
+person.fullName.apply(person1, ["Oslo", "Norway"]);
+person.fullName.call(person1, "Oslo", "Norway");
+```
+
+Practical way of using: use where it is impossible to apply an array as argument:
+
+```
+// 1:
+let arr = [1, 2, 3];
+let numbers = [4, 5, 6];
+arr.push.apply(arr, numbers);
+
+// 2:
+Math.max.apply(null, [1,2,3]);
 ```
