@@ -16,12 +16,15 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
   - Closure
   - `bind`
   - `call`
+  - IIFE - Immediately Invoked Function Expression
 - [JS fundamentals](jsfundamentals.md)
   - Data types
   - Comparison operators
+  - ECMAScript2015 (ES6)
 - [Miscellaneous](miscellaneous.md)
   - `use strict`
   - Hoisting
+  - Spread & rest
 - [Objects](objects.md)
   - Copying
 - [OOP](OOP.md)
@@ -30,3 +33,5 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
 - [Web](web.md)
   - How browser requests a page
   - How browser renders a page
+- [DOM API](DOM.md)
+  - Event propagation

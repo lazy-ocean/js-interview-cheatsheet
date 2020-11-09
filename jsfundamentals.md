@@ -18,7 +18,7 @@ const bigInt = 4872343298732847239847n
 
 - String
 - Boolean
-- `undefined` - value has not been defined
+- `undefined` - value has not been defined, function that doesn't return anything, unset object property
 - Symbol - anonymous, unique value
 
 #### 2. `null`
@@ -62,3 +62,61 @@ undefined == undefined || undefined === undefined // true
 ```
 
 ---
+
+## ECMAScript2015 (ES6)
+
+What's new:
+
+- Arrow functions
+- Classes
+- Template strings
+
+Those with '``' - grave accents, available to concatenate different parts into a single string:
+
+```
+console.log(`Hi ${name}!`)
+```
+
+- Enhanced Object Literals
+
+So `{ cat: cat, meow: meow }` works just like `{ cat, meow }`
+
+- Destructuring
+
+```
+let [blah1, blah2, blah3] = arr;
+let [head, ...tail] = [1, 2, 3, 4];
+let { firstName, lastName, position, yearHired } = employee
+```
+
+- Promises
+- Generators (function\*)
+
+```
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+console.log(gen.next().value); // expected output: 10
+console.log(gen.next().value); // expected output: 20
+```
+
+- Modules (import and export)
+
+Earlier worked with CommonJS-NodeJS & AMD
+
+- Symbol
+- Sets
+
+Collections of unique values, use delete(), add(), has(), size() and clear() methods.
+
+```
+const set1 = new Set()
+const set2 = new Set(['a','b','c','d','d','e']) // => ['a','b','c','d','e']
+```
+
+- Default values
+- Rest & Spread
+- Let & Const

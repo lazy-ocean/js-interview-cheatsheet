@@ -27,7 +27,7 @@ Some languages execute functions automatically if named somewhere, but not JS.
 
 ## Closure
 
-All JS functions use closure: it is the opportunity to get to the outer and global lexical environment variables that are referenced in the function, this way function can not only use but modificate outer environment variables.
+All JS functions use closure: it is the opportunity to get to the outer and global lexical environment (scope) variables that are referenced in the function, this way function can not only use but modificate outer environment variables.
 
 **Example 1:**
 
@@ -175,4 +175,28 @@ arr.push.apply(arr, numbers);
 
 // 2:
 Math.max.apply(null, [1,2,3]);
+```
+
+---
+
+## IIFE - Immediately Invoked Function Expression
+
+IIFE is a function that executes right after its declaration.
+
+```
+(function( ) { }( ))
+
+(function( ) { })( )
+
+(function named(params) { })( )
+
+(( ) => { })
+
+(function(global) { })(window)
+
+const utility = (function( ) {
+    return {
+        //
+    }
+})
 ```
