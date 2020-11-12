@@ -200,3 +200,57 @@ const utility = (function( ) {
     }
 })
 ```
+
+---
+
+## Arrow functions vs regular
+
+#### `this`
+
+Regular functions:
+
+- can be a reference to global object (window)
+- when used in object, the scope of `this` is that object
+- when used in a function with several arguments, `this` references the first argument
+
+Arrow functions:
+Arrow functions don't create its local environment, they use outer one, so they don't create its `this`, only use one of outer or global environment.
+
+#### Constructors
+
+As arrow functions don't have its own `this`, you cannot use it to create objects.
+
+#### Arguments
+
+Regular function has an `arguments` object with all the arguments the function has been called with.
+
+```
+function myFunction() {
+  console.log(arguments);
+}
+myFunction('a', 'b'); // { 0: 'a', 1: 'b'}
+```
+
+Arrow functions don't have `arguments`, you can only get it directly using destructuring:
+
+```
+const myArrowFunction = (...args) => {
+  console.log(args);
+}
+myArrowFunction('c', 'd');
+```
+
+#### Return
+
+In regular functions `return` used as the only way to return the result of the function. Othervise, `undefined` will be shown.
+
+Arrow functions may return the result automatically, when it has only one expression:
+
+```
+const increment = (num) => num + 1;
+increment(41); // => 42
+```
+
+#### Class methods
+
+Regular functions are mostly used, but you can use arrow functions to avoid using `bind` with `this`, as regular functions will use the outer scope => the object scope.

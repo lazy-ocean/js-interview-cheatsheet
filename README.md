@@ -7,31 +7,53 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
 
 ## Contents
 
-- [Asynchronous programming](asynchronous.md)
+### JavaScript
 
+- [Asynchronous programming](Javascript/asynchronous.md)
   - `setTimeout`
-
-- [Functions](functions.md)
+- [Functions](Javascript/functions.md)
   - Function expressions
   - Closure
   - `bind`
   - `call`
   - IIFE - Immediately Invoked Function Expression
-- [JS fundamentals](jsfundamentals.md)
+  - Arrow functions vs regular
+- [JS fundamentals](Javascript/jsfundamentals.md)
   - Data types
   - Comparison operators
   - ECMAScript2015 (ES6)
-- [Miscellaneous](miscellaneous.md)
+- [Miscellaneous](Javascript/miscellaneous.md)
   - `use strict`
   - Hoisting
   - Spread & rest
-- [Objects](objects.md)
+  - The Big-O notation
+- [Objects](Javascript/objects.md)
   - Copying
-- [OOP](OOP.md)
+- [OOP](Javascript/OOP.md)
   - Classes
   - Polymorphism
+- [DOM API](Javascript/DOM.md)
+  - Event propagation
+
+### HTML
+
+- [HTML](HTML/HTML.md)
+
+  - WAI-ARIA
+  - HTML5 - what's new
+  - Web-workers
+
+- [Tags](HTML/HTML.md)
+  - `<main>`
+  - `<alt>` attribute
+  - Non-closing tags ('empty elements')
+
+### Other
+
+- [CSS](css.md)
+
+  - Selectors priority
+
 - [Web](web.md)
   - How browser requests a page
   - How browser renders a page
-- [DOM API](DOM.md)
-  - Event propagation
