@@ -9,30 +9,30 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
 
 ### JavaScript
 
-- [Asynchronous programming](Javascript/asynchronous.md)
+- [Asynchronous programming](JavaScript/asynchronous.md)
   - `setTimeout`
-- [Functions](Javascript/functions.md)
+- [Functions](JavaScript/functions.md)
   - Function expressions
   - Closure
   - `bind`
   - `call`
   - IIFE - Immediately Invoked Function Expression
   - Arrow functions vs regular
-- [JS fundamentals](Javascript/jsfundamentals.md)
+- [JS fundamentals](JavaScript/jsfundamentals.md)
   - Data types
   - Comparison operators
   - ECMAScript2015 (ES6)
-- [Miscellaneous](Javascript/miscellaneous.md)
+- [Miscellaneous](JavaScript/miscellaneous.md)
   - `use strict`
   - Hoisting
   - Spread & rest
   - The Big-O notation
-- [Objects](Javascript/objects.md)
+- [Objects](JavaScript/objects.md)
   - Copying
-- [OOP](Javascript/OOP.md)
+- [OOP](JavaScript/OOP.md)
   - Classes
   - Polymorphism
-- [DOM API](Javascript/DOM.md)
+- [DOM API](JavaScript/DOM.md)
   - Event propagation
 
 ### HTML
@@ -50,7 +50,7 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
 
 ### Other
 
-- [CSS](css.md)
+- [CSS](CSS.md)
 
   - Selectors priority
 
