@@ -182,6 +182,7 @@ Math.max.apply(null, [1,2,3]);
 ## IIFE - Immediately Invoked Function Expression
 
 IIFE is a function that executes right after its declaration.
+At the same time, it is used to prevent accessing variables within IIFE from the global scope.
 
 ```
 (function( ) { }( ))
@@ -254,3 +255,33 @@ increment(41); // => 42
 #### Class methods
 
 Regular functions are mostly used, but you can use arrow functions to avoid using `bind` with `this`, as regular functions will use the outer scope => the object scope.
+
+---
+
+## `this`
+
+Keyword `this` is used to link an object with the function. It is "non-strict" which means it's defined at the moment and place of executing.
+As a method, it refers to the owner of the method, wherever it is called.
+In event, it refers to the element that received the event.
+
+```
+let user = { name: "John" };
+let admin = { name: "admin" };
+
+function sayHi() {
+  alert( this.name );
+}
+
+user.f = sayHi;
+admin.f = sayHi;
+
+user.f(); // John  (this == user)
+admin.f(); // Admin  (this == admin)
+```
+
+---
+
+## Prototype
+
+When it comes to inheritance, JavaScript only has one construct: objects. Each object has a property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with `null` as its prototype. `null` has no prototype == final link in this chain.
+JS objects inherit properties and methods from a prototype. This is similar to a classes and its inheritance, only it is JS-functions.

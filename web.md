@@ -37,8 +37,10 @@ Similar to DOM, CSSOM is built - it is a map of all CSS selectors and properties
 Unlike DOM, CSS rules can overwrite each other on various stages, that's why the rendering stops till the whole CSSOM from all sources (like different Sass files) is ready.
 
 4. **Execute the JS**
-   Depending on browser engine, it is difficult to say definitely how JS will be parsed, compiled and executed.
+   Depending on browser engine, it is difficult to say definitely how JS will be parsed, compiled and executed. But it's done by engine: V8 (Google), Rhino (Mozilla), Chakra (Edge & IE) etc.
 
+JS code complies Just-In-Time (JIT) = at the time of running = code is compiling to binary instructions. Right after, this code is interpreted into "machine code" and executed. V8 translates js code to the more efficient machine code instead of interpreting some other intermediate code.
+Step-by-step: compiling and executing code, initiate call stack, manage memory heap, handle garbage collection.
 Then events are loaded: first `document.DOMContentLoaded`, which is a great practice to add, then everything else: sync, async, images. Only then `window.load`.
 
 5. **DOM and CSSOM merge to a tree**
@@ -48,3 +50,30 @@ Then events are loaded: first `document.DOMContentLoaded`, which is a great prac
 6. **Calculate layout and paint**
 
 Based on CSS properties for every DOM-node, calculations are made on where exactly every element should be displayed. That layout is pixel-painted, so now we have a full page!
+
+---
+
+## `XMLHttpRequest`
+
+Now `fetch` is used instead.
+
+```
+let xhr = new XMLHttpRequest();
+xhr.open(method, URL, [async, user, password]);
+xhr.send([body]);
+
+xhr.onload = function() {
+  alert(`Loaded: ${xhr.status} ${xhr.response}`);
+};
+
+xhr.onerror = function() {
+  alert(`Error ${xhr.status}`);
+};
+
+xhr.onprogress = function(event) {
+  // event.loaded - bytes loaded
+  // event.lengthComputable = true if there're Content-Length header
+  // event.total - bytes total (if lengthComputable = true)
+  alert(`Loaded ${event.loaded} of ${event.total}`);
+};
+```

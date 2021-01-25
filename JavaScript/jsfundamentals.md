@@ -120,3 +120,15 @@ const set2 = new Set(['a','b','c','d','d','e']) // => ['a','b','c','d','e']
 - Default values
 - Rest & Spread
 - Let & Const
+
+---
+
+## Event loop
+
+Stack-Heap-Queue dynamics + event loop as it is: dequeue event, call its callback and pop next item from the call stack.
+
+---
+
+## AJAX
+
+AJAX = Asynchronous JavaScript And XML. In a nutshell, it is the use of the `XMLHttpRequest` object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
