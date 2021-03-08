@@ -14,16 +14,20 @@ To make process faster, this is usually cached, so first your browser cache chec
 After the DNS lookup, HTTP (HTTPS, HTTP/2) `GET` request is sent to the appropriate server. It might be not only from browser but also from search engine mechanisms or anything else that could send a request.
 
 3. **Server responds**
-   After request, server must respond with something: might be an error (404, 500), redirection (302-301), ideally it is `200 OK` and a requested info, in this case, an **HTML file**.
+
+After request, server must respond with something: might be an error (404, 500), redirection (302-301), ideally it is `200 OK` and a requested info, in this case, an **HTML file**.
 
 ## How browser renders a page
 
 1. **Parse the HTML**
 
-HTML converts intro a DOM
+HTML is converted intro a DOM
 
-> DOM (Document Object Model) is the data representation of the objects that compose a structure and a content of the web-page
-> First, HTML is breaking up on start-end tags: `html`, `head`, `link`, `script`, `body`, `header`, `div`, `p` and so on. That constructs the DOM tree. 2. **Fetch external resourses**
+> DOM (Document Object Model) is the data representation of the objects that compose a structure and a content of the web-page.
+
+First, HTML is breaking up on start-end tags: `html`, `head`, `link`, `script`, `body`, `header`, `div`, `p` and so on. That constructs the DOM tree.
+
+2. **Fetch external resourses**
 
 When parser comes across CSS, JS or other external resource, it goes to fetch it.
 
@@ -37,7 +41,8 @@ Similar to DOM, CSSOM is built - it is a map of all CSS selectors and properties
 Unlike DOM, CSS rules can overwrite each other on various stages, that's why the rendering stops till the whole CSSOM from all sources (like different Sass files) is ready.
 
 4. **Execute the JS**
-   Depending on browser engine, it is difficult to say definitely how JS will be parsed, compiled and executed. But it's done by engine: V8 (Google), Rhino (Mozilla), Chakra (Edge & IE) etc.
+
+Depending on browser engine, it is difficult to say definitely how JS will be parsed, compiled and executed. But it's done by engine: V8 (Google), Rhino (Mozilla), Chakra (Edge & IE) etc.
 
 JS code complies Just-In-Time (JIT) = at the time of running = code is compiling to binary instructions. Right after, this code is interpreted into "machine code" and executed. V8 translates js code to the more efficient machine code instead of interpreting some other intermediate code.
 Step-by-step: compiling and executing code, initiate call stack, manage memory heap, handle garbage collection.

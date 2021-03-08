@@ -7,7 +7,7 @@
 - Number:
   - numbers
   - floating point numbers
-  - positive and negative infinity (when dividing by 0 or set explicitly)
+  - positive and negative infinity (when dividing by 0 or set explicitly) (Number.MAX_SAFE_INTEGER, ...)
   - NaN (wrong math operations, operations with NaNs)
 - BigInt - any number >/< of 2^53-1.
   To announce `BigInt` add n at the end of the number:

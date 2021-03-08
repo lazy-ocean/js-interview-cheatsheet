@@ -7,5 +7,5 @@
 3. It is JS-based, it doesn't expand JavaScript as Angular JS does.
 4. JSX is simple to use and understand
 5. React Native exists
-6. Well defined lifecycle (render, componentDidMount, componentWillUnmount, componentDidUpdate, etc)
+6. Well defined lifecycle (render, componentDidMount, componentWillUnmount, componentDidUpdate, etc ===> useState, useEffect, useMemo)
 7. Easy to test (Jest, Enzyme)
