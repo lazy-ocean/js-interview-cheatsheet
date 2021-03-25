@@ -22,6 +22,8 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
   - Data types
   - Comparison operators
   - ECMAScript2015 (ES6)
+  - Node.js and npm
+  - Scope
 - [Miscellaneous](JavaScript/miscellaneous.md)
   - `use strict`
   - Hoisting
@@ -61,3 +63,6 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
 
 - [React](React.md)
   - Why choose React
+  - React in a nutshell
+  - Virtual DOM
+  - Lifecycle methods
