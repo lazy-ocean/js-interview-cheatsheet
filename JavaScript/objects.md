@@ -2,7 +2,7 @@
 
 ## Copying
 
-This way, there're no separate objects: there're two _references_ on original one:
+This way, there're no separate objects: there're two _references_ of original one:
 
 ```
 let animal = { name: "cat" };

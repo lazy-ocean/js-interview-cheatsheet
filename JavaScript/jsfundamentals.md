@@ -9,8 +9,8 @@
   - floating point numbers
   - positive and negative infinity (when dividing by 0 or set explicitly) (Number.MAX_SAFE_INTEGER, ...)
   - NaN (wrong math operations, operations with NaNs)
-- BigInt - any number >/< of 2^53-1.
-  To announce `BigInt` add n at the end of the number:
+  - BigInt - any number >/< of 2^53-1.
+    To announce `BigInt` add n at the end of the number:
 
 ```
 const bigInt = 4872343298732847239847n
@@ -118,7 +118,7 @@ const set2 = new Set(['a','b','c','d','d','e']) // => ['a','b','c','d','e']
 ```
 
 - Default values
-- Rest & Spread
+- Rest (indef number of arguments to the function) & Spread (join arrays)
 - Let & Const
 
 ---
@@ -132,3 +132,16 @@ Stack-Heap-Queue dynamics + event loop as it is: dequeue event, call its callbac
 ## AJAX
 
 AJAX = Asynchronous JavaScript And XML. In a nutshell, it is the use of the `XMLHttpRequest` object to communicate with servers. It can send and receive information in various formats, including JSON, XML, HTML, and text files. AJAX’s most appealing characteristic is its "asynchronous" nature, which means it can communicate with the server, exchange data, and update the page without having to refresh the page.
+
+---
+
+## Node.js & npm
+
+**Node.js** is a web app framework built on Chrome's JS engine (V8). It allows (or used) to use an environment on wich a JS code could be executed and therefore executed not only in browser but on every machine with Node, or on server.  
+**npm** - Node package manager, access node.js packages, modules to use in your projects and is also an utility to execute commands in command line (instal dependencies, serve your project, build etc.)
+
+---
+
+## Scope
+
+Scope is basically a concept of how variables are accessed from within a function and inside of it. Every function has its scope and other functions have no access to each others, but they have to global scope, There're also nested scopes.

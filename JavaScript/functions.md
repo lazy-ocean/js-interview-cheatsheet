@@ -27,7 +27,22 @@ Some languages execute functions automatically if named somewhere, but not JS.
 
 ## Closure
 
-All JS functions use closure: it is the opportunity to get to the outer and global lexical environment (scope) variables that are referenced in the function, this way function can not only use but modificate outer environment variables.
+All JS functions use closure: it is the opportunity to get to the outer and global lexical environment (scope) variables that are referenced in the function, this way function can not only use but modify outer environment variables.
+The inner function will have access to the variables in the outer function scope, even after the outer function has returned.
+
+**Difficult example**
+
+```
+const sum = (a) => {
+  console.log(a) // => 1
+  return (b) => {
+    console.log(b) // => 2
+    return a + b
+  };
+}
+const sum1 = sum(1)
+console.log(sum1(2)) // => 3
+```
 
 **Example 1:**
 
@@ -210,7 +225,7 @@ const utility = (function( ) {
 
 Regular functions:
 
-- can be a reference to global object (window)
+- can be a reference to the global object (window)
 - when used in object, the scope of `this` is that object
 - when used in a function with several arguments, `this` references the first argument
 
