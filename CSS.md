@@ -60,3 +60,24 @@ GD is the journey from complexity to simplicity, while PE is simplicity to compl
 
 By default, all elements has `box-sizing: content-box`: all sizes are based on content size.  
 `border-box` takes padding and border into account, so height now is content height + vertical paddings + vertical borders width. Width is content width + horizontal paddings + horizontal borders width.
+
+## `position`
+
+- `static`: items displayed as usual, according to the parent properties or other elements around it.
+- `fixed`: fixed to a certain point set c Does not get changed by scrolling
+- `relative`: position relative to its original location. Rarely set with `right`, `left`, `top` and `bottom` properties but mostly used as an anchor for absolutely positioned elements.
+- `absolute`: displayed relatively to parent relatively positioned element with set `right`, `left`, `top` and `bottom` properties. Is affected by the parent element position when its size or position is changed.
+- `sticky` stays in place until other sticky element replaces it. Positioned relatively to the nearest parent block.
+
+## CSS3, what's new
+
+- media queries
+- transitions, transformation
+- flexbox
+- pseudo elements
+- opacity
+- shadows, gradients
+- advanced selectors
+- filters
+- types of colors (RGBA, HSL)
+- animations (using `@keyframes`)
