@@ -62,7 +62,13 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
   - How browser renders a page
 
 - [React](React.md)
+
   - Why choose React
   - React in a nutshell
   - Virtual DOM
   - Lifecycle methods
+
+- [HTTP](HTTP.md)
+
+  - HTTP
+  - REST API
