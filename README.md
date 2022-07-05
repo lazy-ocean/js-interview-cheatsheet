@@ -36,6 +36,8 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
   - Polymorphism
 - [DOM API](JavaScript/DOM.md)
   - Event propagation
+- [Design patterns](JavaScript/patterns.md)
+  - Patterns breakdown and categorization
 
 ### HTML
 
@@ -72,3 +74,7 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
 
   - HTTP
   - REST API
+
+- [Miscellaneous](Miscellaneous.md)
+
+  - Hydration

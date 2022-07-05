@@ -123,6 +123,59 @@ const set2 = new Set(['a','b','c','d','d','e']) // => ['a','b','c','d','e']
 
 ---
 
+## ECMAScript 2022
+
+### Top-level `await` in modules
+
+**Old:**
+
+```
+await Promise.resolve(console.log('🎉'));
+// → SyntaxError: await is only valid in async function
+
+(async function() {
+  await Promise.resolve(console.log('🎉'));
+  // → 🎉
+}());
+```
+
+**New:**
+
+```
+await Promise.resolve(console.log('🎉'));
+// → 🎉
+```
+
+### `error.cause`
+
+```
+try {
+        // ···
+      } catch (error) {
+        throw new Error(
+          `While processing ${filePath}`,
+          {cause: error}
+        );
+      }
+```
+
+### `.at()`
+
+For strings and arrays
+
+```
+> ['a', 'b', 'c'].at(0)
+'a'
+> ['a', 'b', 'c'].at(-1)
+'c'
+```
+
+### `Object.hasOwn()`
+
+Replaces `Object.hasOwnProperty()`. Works with `Object.create(null)`.
+
+---
+
 ## Event loop
 
 Stack-Heap-Queue dynamics + event loop as it is: dequeue event, call its callback and pop next item from the call stack.
