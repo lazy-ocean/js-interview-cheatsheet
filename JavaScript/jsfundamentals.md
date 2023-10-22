@@ -176,6 +176,36 @@ Replaces `Object.hasOwnProperty()`. Works with `Object.create(null)`.
 
 ---
 
+## ECMAScript 2023
+
+### Array find from last
+
+```
+const isEven = (number) => number % 2 === 0;
+const numbers = [1, 2, 3, 4];
+
+// OLD:
+// from first to the last lookup
+console.log(numbers.find(isEven));
+// 2
+console.log(numbers.findIndex(isEven));
+// 1
+
+// NEW:
+// from last to the first lookup
+console.log(numbers.findLast(isEven));
+// 4
+console.log(numbers.findLastIndex(isEven));
+// 3
+```
+
+### Change array by copy
+
+`reverse()`, `sort()` and `splice()` modify array in place. New equivalents are returning a new copy:
+`toReversed()`, `toSorted()` and `toSpliced()`.
+
+---
+
 ## Event loop
 
 Stack-Heap-Queue dynamics + event loop as it is: dequeue event, call its callback and pop next item from the call stack.

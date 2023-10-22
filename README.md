@@ -27,6 +27,8 @@ May be used as a short guide to refresh your knowledge before the hard-skill int
   - Data types
   - Comparison operators
   - ECMAScript2015 (ES6)
+  - ECMAScript2022
+  - ECMAScript2023
   - Node.js and npm
   - Scope
 
